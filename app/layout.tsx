@@ -18,7 +18,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} p-8`}>
         <NavBar />
-        <div className="container mt-14">{children}</div>
+        <div className="container mt-14 ">{children}</div>
       </body>
     </html>
   );

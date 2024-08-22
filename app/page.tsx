@@ -4,8 +4,8 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between ">
-      <section className="hero bg-primary h-screen w-full rounded-3xl p-8">
+    <main className="flex min-h-screen flex-col  items-center justify-between ">
+      <section className="hero  bg-primary  w-full rounded-3xl p-8">
         <div className="rows flex justify-between  [&>*]:flex-1 ">
           <div className="cols  flex flex-col lg:gap-10 gap-6 ">
             <Button className="bg-[#a2bbac] self-start text-white rounded-3xl h-8" >#Flexiblesolution</Button>
