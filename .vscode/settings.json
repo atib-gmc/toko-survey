@@ -1,0 +1,14 @@
+{
+  "vim.insertModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<capslock>"],
+      "after": ["<esc>"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<capslock>"],
+      "after": ["<esc>"]
+    }
+  ]
+}

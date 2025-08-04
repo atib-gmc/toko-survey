@@ -72,6 +72,10 @@ const config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      backgroundImage: {
+        'hero-bg': "url('https://alpinesurveys.co.uk/wp-content/uploads/2022/04/shutterstock_1247187910-2048x1367-1-1024x684.jpeg')",
+        'overlay': "linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 80%)",
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
