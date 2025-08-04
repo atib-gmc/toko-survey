@@ -26,7 +26,7 @@ export default function SearchResult() {
             <AlertTitle>Result:</AlertTitle>
             <AlertDescription className='flex flex-col'>
               {data.map(prod => (
-                <Button onClick={() => setnameProd("")} variant="outline" asChild  >
+                <Button key={prod.id} onClick={() => setnameProd("")} variant="outline" asChild  >
                   <Link href={`/produk/${prod.id}`} >{prod.nama}</Link>
                 </Button>
               ))}

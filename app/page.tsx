@@ -1,5 +1,4 @@
 
-
 // app/components/HomePage.jsx
 export default function HomePage() {
   return (
@@ -20,19 +19,16 @@ export default function HomePage() {
           </button>
         </div>
         </div>
-
-
       </section>
-
       {/* Tentang Kami Section */}
       <section className="section-about  md:px-[20%]  [&>*]:w-full  w-full flex py-16 px-4  mx-auto text-left">
-<div className="row ">logo</div>
-<div className="row">
-        <h2 className="text-3xl font-bold mb-4 uppercase">Tentang Kami</h2>
-        <p className="text-lg text-gray-700">
-          Kami adalah penyedia bahan bangunan terpercaya yang telah melayani berbagai proyek dari rumah hingga industri besar. Mengutamakan kualitas dan kepercayaan sejak awal berdiri.
-        </p>
-</div>
+        <div className="row ">logo</div>
+          <div className="row">
+            <h2 className="text-3xl font-bold mb-4 uppercase">Tentang Kami</h2>
+              <p className="text-lg text-gray-700">
+              Kami adalah penyedia bahan bangunan terpercaya yang telah melayani berbagai proyek dari rumah hingga industri besar. Mengutamakan kualitas dan kepercayaan sejak awal berdiri.
+              </p>
+        </div>
       </section>
 
       {/* Produk Section */}
@@ -52,7 +48,7 @@ export default function HomePage() {
       </section>
 
       {/* Galeri Proyek Section */}
-      <section className="section-galeri py-16 px-4 max-w-6xl mx-auto">
+      <section className="section-galeri  py-16 w-full md:px-[20%]  mx-auto">
         <h2 className="text-3xl font-bold text-left mb-10">Galeri Proyek</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           {[1, 2, 3, 4, 5, 6].map((n) => (
@@ -62,7 +58,7 @@ export default function HomePage() {
       </section>
 
       {/* Kontak Section */}
-      <section className="section-kontak bg-blue-700 text-white py-16 px-4 text-center">
+      <section className="section-kontak bg-blue-700  text-white md:px-[20%] py-16 px-4 text-center">
         <h2 className="text-3xl font-bold mb-4">Hubungi Kami</h2>
         <p className="mb-6">Silakan hubungi kami melalui informasi di bawah ini:</p>
         <div className="space-y-2">
