@@ -1,23 +1,40 @@
-import { Button } from "@/components/ui/button"; import { product } from "@/lib/products";
-import { ArrowRight } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
+// app/products/page.tsx
+import ProductCard from "@/components/ui/ProductCard";
+const products = [
+  {
+    id: 1,
+    name: "Produk Satu",
+    description: "Deskripsi singkat produk satu.",
+    price: "Rp 120.000",
+    image: "https://placehold.co/600x400",
+  },
+  {
+    id: 2,
+    name: "Produk Dua",
+    description: "Deskripsi singkat produk dua.",
+    price: "Rp 95.000",
+    image: "https://placehold.co/600x400",
+  },
+  {
+    id: 3,
+    name: "Produk Tiga",
+    description: "Deskripsi singkat produk tiga.",
+    price: "Rp 150.000",
+    image: "https://placehold.co/600x400",
+  },
+];
 
-export default function Home() {
+export default function ProductListPage() {
   return (
-    <main className="flex min-h-screen flex-col  items-center justify-between ">
-      <section className="hero  bg-primary  w-full rounded-3xl p-8 flex gap-8 justify-between flex-wrap">
-        {product.map(data => (
-          <Link key={data.id} href={`produk/${data.id}`}>
-            <div className="card cursor-pointer max-w-60 flex-wrap w-full flex-col items-center min-h-80 bg-background p-2 flex  align-auto rounded-3xl">
-              <Image src="/hero.png" alt="img" width={120} height={120} className="max-h-[160px]" />
-              <h3 className="text-md font-semibold">{data.nama}</h3>
-              <h4 className="text-normal">Rp. 90.000.000</h4>
-              <p className="text-xs text-gray-400 text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam, quae!</p>
-            </div>
-          </Link>
-        ))}
-      </section>
-    </main>
+    <section className="bg-yellow-300 min-h-screen py-16 px-[20%] text-left">
+      <div className="max-w-6xl mx-auto text-center">
+        <h2 className="text-3xl font-extrabold text-blue-900 mb-10 md:text-left ">PRODUK</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+          {products.map((product, idx) => (
+            <ProductCard key={idx} product={product} />
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }

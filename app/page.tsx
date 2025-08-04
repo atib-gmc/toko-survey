@@ -1,3 +1,4 @@
+import Image from "next/image";
 
 // app/components/HomePage.jsx
 export default function HomePage() {
@@ -6,28 +7,35 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="section-hero  bg-hero-bg bg-cover  text-white   text-center">
         <div className="bg-overlay md:px-[20%] w-full h-[100%] py-32">
-        <h1 className="text-4xl text-left
+          <h1 className="text-4xl text-left
          md:text-6xl font-bold mb-4">
-          Solusi Terpercaya untuk Kebutuhan Bahan Bangunan Anda
-        </h1>
-        <div className="w-full flex justify start gap-2">
-          <button className="bg-red-500  px-6 py-3 font-semibold rounded-lg shadow hover:bg-red-700 transition">
-            Lihat Produk
-          </button>
-          <button className=" bg-blue-700 px-6 py-3 font-semibold rounded-lg shadow hover:bg-gray-100 transition">
-            Hubungi Kami
-          </button>
-        </div>
+            Solusi Terpercaya untuk Kebutuhan Instrumen pengukuran dan pemetaan konstruksi anda
+          </h1>
+          <div className="w-full flex justify start gap-2">
+            <button className="bg-red-500  px-6 py-3 font-semibold rounded-lg shadow hover:bg-red-700 transition">
+              Lihat Produk
+            </button>
+            <button className=" bg-blue-700 px-6 py-3 font-semibold rounded-lg shadow hover:bg-gray-100 transition">
+              Hubungi Kami
+            </button>
+          </div>
         </div>
       </section>
       {/* Tentang Kami Section */}
-      <section className="section-about  md:px-[20%]  [&>*]:w-full  w-full flex py-16 px-4  mx-auto text-left">
-        <div className="row ">logo</div>
-          <div className="row">
-            <h2 className="text-3xl font-bold mb-4 uppercase">Tentang Kami</h2>
-              <p className="text-lg text-gray-700">
-              Kami adalah penyedia bahan bangunan terpercaya yang telah melayani berbagai proyek dari rumah hingga industri besar. Mengutamakan kualitas dan kepercayaan sejak awal berdiri.
-              </p>
+      <section id="tentang" className="section-about  md:px-[20%]  [&>*]:w-full  w-full flex py-16 px-4  mx-auto text-left">
+        <div className="row flex items-center justify-start ">
+          <Image
+            src="/logo.png"
+            alt="Logo Maxima"
+            width={220}
+            height={220}
+          />
+
+        </div>
+        <div className="row">
+          <h2 className="text-3xl font-bold mb-4 uppercase">Tentang Kami</h2>
+          <p className="text-lg text-gray-700">
+            <strong>Bintang Survey</strong> adalah supplier alat konstruksi yang fokus pada penyediaan alat survey tanah, GPS tracker, dan peralatan pendukung proyek. Kami mendukung berbagai kebutuhan di bidang konstruksi dan pemetaan dengan produk berkualitas dan layanan terpercaya. Komitmen kami adalah menjadi mitra terbaik untuk akurasi dan efisiensi setiap proyek Anda.              </p>
         </div>
       </section>
 
