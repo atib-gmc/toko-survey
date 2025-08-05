@@ -1,11 +1,33 @@
 'use client'
 
+import BackButton from '@/components/ui/BackButton'
 import Link from 'next/link'
 import React from 'react'
 
-export default function page() {
+export default function Page() {
+  const handleWhatsAppClick = () => {
+    const phoneNumber = '6285155117796' // Ganti dengan nomor WA kamu
+    const product = {
+      name: 'Nama Produk',
+      price: 'Rp299.000',
+      description:
+        'Deskripsi singkat tentang produk ini. Menjelaskan fitur dan manfaat utama dalam gaya bahasa yang simple dan ramah.',
+    }
+
+    const message = `Halo, saya tertarik dengan produk berikut:\n` +
+      `Nama Produk: ${product.name}\n` +
+      `Harga: ${product.price}\n` +
+      `Deskripsi: ${product.description}\n` +
+      `Apakah masih tersedia?`
+
+    const encodedMessage = encodeURIComponent(message)
+    const waLink = `https://wa.me/${phoneNumber}?text=${encodedMessage}`
+
+    window.open(waLink, '_blank')
+  }
+
   return (
-    <section className="bg-[#f7f2ec] text-gray-800 px-6 py-10 rounded-2xl shadow-md max-w-3xl mx-auto mt-10">
+    <section className="bg-[#f7f2ec] pt-20  text-gray-800 px-6 py-10 rounded-2xl shadow-md max-w-3xl mx-auto mt-10">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <div>
           <img
@@ -20,16 +42,22 @@ export default function page() {
             Deskripsi singkat tentang produk ini. Menjelaskan fitur dan manfaat utama dalam gaya bahasa yang simple dan ramah.
           </p>
           <p className="text-2xl font-semibold text-green-700">Rp299.000</p>
-          <button className="bg-black text-white px-6 py-3 rounded-full hover:bg-gray-800 transition">
-            Beli Sekarang
+
+          {/* Tombol WA */}
+          <button
+            onClick={handleWhatsAppClick}
+            className="bg-black text-white px-6 py-3 rounded-full hover:bg-gray-800 transition"
+          >
+            Beli Sekarang via WhatsApp
           </button>
         </div>
       </div>
-            <Link href="/produk">
-        <span className="inline-block px-6 py-3 rounded-xl bg-neutral-100 hover:bg-neutral-200 text-neutral-600 transition font-medium">
-          ← Kembali ke daftar produk
+
+      <BackButton >
+        <span className="mt-6 inline-block text-blue-600 hover:underline">
+          Kembali ke Daftar Produk
         </span>
-      </Link>
+      </BackButton>
     </section>
   )
 }
