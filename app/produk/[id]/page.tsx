@@ -1,6 +1,7 @@
 'use client'
 
 import BackButton from '@/components/ui/BackButton'
+import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
@@ -30,10 +31,12 @@ export default function Page() {
     <section className="bg-[#f7f2ec] pt-20  text-gray-800 px-6 py-10 rounded-2xl shadow-md max-w-3xl mx-auto mt-10">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <div>
-          <img
+          <Image
             src="https://placehold.co/600x400"
             alt="Product"
             className="rounded-xl shadow-md w-full"
+            width={600}
+            height={400}
           />
         </div>
         <div className="flex flex-col space-y-4">

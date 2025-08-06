@@ -32,7 +32,7 @@ export default function HomePage() {
           <Image src="/logo.png" alt="Logo Maxima" width={150} height={150} className="inline-block mr-2" />
           <div className="name flex flex-col ">
             <span className="text-2xl font-bold italic text-red-500">Bintang Survey</span>
-            <span className="text-lg text-gray-600 ">Survey Instrument's</span>
+            <span className=" text-gray-600 text-xs">Survey Instrument&apos;s</span>
           </div>
         </div>
 
