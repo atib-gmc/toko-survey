@@ -4,6 +4,10 @@ import Link from "next/link";
 import { log } from "console";
 import { products } from "./data/products";
 import ProductCard from "@/components/ui/ProductCard";
+import { clientLogos } from "@/lib/clientLogos";
+import Logo from "@/components/ui/Logo";
+import Footer from "./sections/footer";
+import Testimonials from "./sections/testimoni";
 
 // app/components/HomePage.jsx
 export default function HomePage() {
@@ -39,7 +43,7 @@ export default function HomePage() {
 
         <div className="row">
           <h2 className="text-3xl font-bold mb-4 uppercase">Tentang Kami</h2>
-          <p className="text-lg text-gray-700">
+          <p className="text-lg text-gray-700 text-justify">
             <strong>Bintang Survey</strong> adalah supplier alat konstruksi yang fokus pada penyediaan alat survey tanah, GPS tracker, dan peralatan pendukung proyek. Kami mendukung berbagai kebutuhan di bidang konstruksi dan pemetaan dengan produk berkualitas dan layanan terpercaya. Komitmen kami adalah menjadi mitra terbaik untuk akurasi dan efisiensi setiap proyek Anda.              </p>
         </div>
       </section>
@@ -53,30 +57,28 @@ export default function HomePage() {
 
               <ProductCard key={product.id} product={product} />
             ))}
-        </div>
+          </div>
         </div>
       </section>
+      {/* Testimonial Section */}
+      <Testimonials />
 
       {/* Galeri Proyek Section */}
-      <section className="section-galeri px-4  py-16 w-full md:px-[20%]  mx-auto">
-        <h2 className="text-3xl font-bold text-left mb-10">Galeri Proyek</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-          {[1, 2, 3, 4, 5, 6].map((n) => (
-            <div key={n} className="h-40 bg-gray-300 rounded-lg" />
-          ))}
+      <section className="section-galeri px-4 -space-y-6 py-16 bg-slate-800 w-full md:px-[20%]  mx-auto">
+        <h2 className="text-3xl font-bold text-white text-left uppercase mb-10">Sudah Dipercaya Oleh Berbagai Client</h2>
+        <p className="text-gray-300 text-justify">Kami telah dipercaya oleh berbagai klien dari berbagai sektor, seperti konstruksi, pertambangan, properti, dan infrastruktur. Kepercayaan ini terwujud melalui layanan profesional, akurasi tinggi, serta komitmen kami dalam memberikan hasil terbaik sesuai kebutuhan proyek.</p>
+        <div className="flex pt-11 md:pt-8 text-white flex-wrap gap-2 p-4 mt-8">
+          {/* Client Logos */}
+          {/* Replace with your actual client logos */}
+          {
+            clientLogos.map((logo, i) => (
+              <Image key={i} src={`/${logo}`} alt="Client Logo" width={138} height={100} className="w-24 h-24 object-contain mx-auto my-4 invert brightness-0" />
+            ))
+          }
         </div>
       </section>
-
       {/* Kontak Section */}
-      <section id="footer" className="section-kontak bg-blue-700  text-white md:px-[20%] py-16 px-4 text-center">
-        <h2 className="text-3xl font-bold mb-4">Hubungi Kami</h2>
-        <p className="mb-6">Silakan hubungi kami melalui informasi di bawah ini:</p>
-        <div className="space-y-2">
-          <p>Email: <a href="mailto:info@bsbahanbangunan.com" className="underline">info@bsbahanbangunan.com</a></p>
-          <p>WhatsApp: <a href="https://wa.me/628123456789" className="underline">+62 812 3456 789</a></p>
-          <p>Alamat: Jl. Contoh No. 123, Kota Anda</p>
-        </div>
-      </section>
+      <Footer />
     </main>
   );
 }

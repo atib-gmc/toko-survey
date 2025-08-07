@@ -58,7 +58,7 @@ export default function Page() {
 
       <BackButton >
         <span className="mt-6 inline-block text-blue-600 hover:underline">
-          Kembali ke Daftar Produk
+          Kembali 
         </span>
       </BackButton>
     </section>
