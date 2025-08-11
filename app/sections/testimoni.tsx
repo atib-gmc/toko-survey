@@ -18,7 +18,7 @@ const testimonials = [
 export default function Testimonials() {
     return (
         <section className="px-6 py-16 bg-white text-white md:px-[20%] mx-auto">
-            <h2 className="text-3xl uppercase text-start font-bold text-blue-900 mb-10 text-center">
+            <h2 className="text-3xl uppercase text-start font-bold text-blue-900 mb-10 ">
                 Ulasan Pelanggan
             </h2>
 

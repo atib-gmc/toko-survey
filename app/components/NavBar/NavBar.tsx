@@ -2,8 +2,10 @@ import Link from "next/link";
 import React from "react";
 import SearchResult from "./SearchResult";
 import Image from "next/image";
+import { getSession } from "next-auth/react";
+import UserMenu from "./DashBoardComponent";
 
-export default function NavBar() {
+export default async function NavBar() {
   return (
     <div className="w-full flex text-blue-700 md:px-[20%]  bg-white md:justify-between items-start md:items-center justify-start  shadow-md flex-col md:flex-row">
       {/* <Link href="/" className="logo text-xl text-gray-900 font-bold"></Link> */}
@@ -16,10 +18,13 @@ export default function NavBar() {
           </div>
         </Link></li>
       </ul>
-      <ul className="flex w-full gap-6 items-center justify-center my-3 md:my-0  md:flex font-semibold pr-2">
+      <ul className="flex w-full gap-6 items-center flex-wrap lg:flex-nowrap justify-center my-3 md:my-0  md:flex font-semibold pr-2">
         <li><Link href="/#tentang" >Tentang</Link></li>
         <li><Link href="/produk" >Produk</Link></li>
         <li><Link href="/#footer" >Hubungi</Link></li>
+        <li>
+          <UserMenu />
+        </li>
       </ul>
       {/* <SearchResult /> */}
     </div>);

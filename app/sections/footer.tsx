@@ -4,7 +4,7 @@ import { FaInstagram, FaWhatsapp, FaEnvelope } from "react-icons/fa";
 
 export default function Footer() {
     return (
-        <footer className="bg-blue-600 text-white px-6 py-10">
+        <footer id="footer" className="bg-blue-600 text-white px-6 py-10">
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:justify-between space-y-8 md:space-y-0">
 
                 {/* Left: Menu + Socials */}
